@@ -1,158 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Introduction to Computing Website</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITC Assignments - Cherry Tiu</title>
+  
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Poppins">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Internal styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F9E5E5; /* Soft pink background */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .w3-bar {
+      background-color: #D36B9B; /* Dark pink navbar */
+      color: white;
+    }
+
+    .w3-bar a {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .w3-bar a:hover {
+      background-color: #F5A7C0; /* Light pink on hover */
+      transition: background-color 0.3s ease;
+    }
+
+    .w3-dropdown-content a:hover {
+      background-color: #F5A7C0;
+    }
+
+    .w3-container {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .w3-content {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    h2, h3 {
+      color: #D36B9B;
+      font-weight: bold;
+    }
+
+    .w3-wide {
+      letter-spacing: 3px;
+      font-size: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .w3-button {
+      background-color: #F5A7C0;
+      color: white;
+      border-radius: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .w3-button:hover {
+      background-color: #D36B9B;
+      transform: scale(1.05);
+    }
+
+    .menu-item {
+      color: #E91E63; /* Vibrant pink links */
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+      font-weight: 500;
+    }
+
+    .menu-item:hover {
+      color: #C2185B;
+    }
+
+    .footer {
+      background-color: #D36B9B;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #ECF0F1;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .footer a:hover {
+      color: #F5A7C0;
+    }
+
+    /* Add smooth transitions for slides */
+    .mySlides {
+      display: none;
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* Add responsiveness */
+    @media screen and (max-width: 600px) {
+      .w3-container {
+        padding: 30px 10px;
+      }
+
+      .w3-bar-item {
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    /* Layout tweaks */
+    .content-left {
+      float: left;
+      width: 48%;
+    }
+
+    .content-right {
+      float: right;
+      width: 48%;
+    }
+
+    /* Clear floats */
+    .clearfix {
+      clear: both;
+    }
+
+  </style>
+</head>
+
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-  
-   
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Javascript Adding 2 Numbers Examples <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="Add2numbersV1.html" class="w3-bar-item w3-button">Add 2 Numbers version #1 - Using Prompts</a>
-        <a href="Add2numbersV2.html" class="w3-bar-item w3-button">Add 2 Numbers version #2 - Using HTML Inputs and Labels</a>
-        <a href="Add2numbersV3.html" class="w3-bar-item w3-button">Add 2 Numbers version #3 - Using Automatic Sum Computation</a>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="Assignments">Assignments <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="https://cherry5201.github.io/ITC/Assign1" class="w3-bar-item w3-button menu-item">Assignment #1 - Conversion</a>
+          <a href="https://cherry5201.github.io/ITC/Assign2" class="w3-bar-item w3-button menu-item">Assignment #2 - Income Tax Calculator</a>
+          <a href="https://cherry5201.github.io/ITC/Assign3" class="w3-bar-item w3-button menu-item">Assignment #3 - Factorial, Sum & Average</a>
+          <a href="https://cherry5201.github.io/ITC/Assign4" class="w3-bar-item w3-button menu-item">Assignment #4 - Simple Payroll</a>
+        </div>
       </div>
     </div>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Javascript Grade Computation Examples<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="GradeComputationV1.html" class="w3-bar-item w3-button">Grade Computation version #1 - Using if else statements</a>
-        <a href="GradeComputationV2.html" class="w3-bar-item w3-button">Grade Computation version #2 - Classifying letter grade using switch statement</a>
-      </div>
-    </div>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Javascript EventListeners<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="Add2numbersV4.html" class="w3-bar-item w3-button">Add 2 Numbers with Button Event Listener</a>
-        <a href="Add2numbersV5.html" class="w3-bar-item w3-button">Add 2 Numbers with Input Event Listener</a>
-        <a href="GradeComputationV3.html" class="w3-bar-item w3-button">Grade Computation with Input Listener (NEW SYNTAX)</a>
-        
-      </div>
-    </div>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Natural Numbers and Loops<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="LOOPWhile.html" class="w3-bar-item w3-button">Printing Natural Numbers with While Loop</a>
-        <a href="LOOPDoWhile.html" class="w3-bar-item w3-button">Printing Natural Numbers with Do While Loop</a>
-        <a href="LOOPFor.html" class="w3-bar-item w3-button">Printing Natural Numbers with For Loop</a>        
-        <a href="RandomNumbersandSorting.html" class="w3-bar-item w3-button">Using Arrays, Generating & Sorting Random Numbers</a>                
-      </div>
-    </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Shopping Carts<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-         <a href="htmltable.html" class="w3-bar-item w3-button">HTML Table</a>
-        <a href="ShoppingCart1.html" class="w3-bar-item w3-button">Version #1 - Simple Shopping Cart</a>
-        <a href="ShoppingCart2.html" class="w3-bar-item w3-button">Version #2 - Using and Formatting HTML Tables</a>
-        <a href="ShoppingCart3.html" class="w3-bar-item w3-button">Version #3 - Styling the Shopping Cart</a>
-        <a href="ShoppingCart4.html" class="w3-bar-item w3-button">Version #4 - Shopping Cart with Layout and Styles</a>
-        <a href="ShoppingCart5.html" class="w3-bar-item w3-button">Version #5 - Improved Javascript</a>
-      </div>
-    </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Other Javascript Examples<i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="LocalandSessionStorage.html" class="w3-bar-item w3-button">Local and Session Storage</a>
-        <a href="ShoppingCart6.html" class="w3-bar-item w3-button">Shopping Cart with Separate Styles and Javascript</a> 
-       <a href="ShoppingCart7.html" class="w3-bar-item w3-button">Using Session Variables to Generate Modal Responses</a> 
-      </div>
-    </div>
-   
   </div>
-</div>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">The Course</a>
-</div>
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <!-- Introduction Section -->
+    <div class="w3-container w3-content" style="max-width:800px" id="band">
+      <h2 class="w3-wide">CS 1130 - Introduction to Computing</h2>
+      <p class="w3-opacity"><i>by <strong>Cherry L. Tiu</strong></i></p>
+      <p class="w3-justify">Hello! I'm Cherry, and this is my journey as a beginner in programming and computing. Explore my assignments below to see how I've been applying what I’ve learned!</p>
 
-   <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">CS 1130 - Introduction to Computing</h2>
-    <p class="w3-opacity"><i> <bold> by John Roy A. Geralde - Class Instructor</bold></i></p>
-    <p class="w3-justify">This is the website for viewing HTML, Javascript Programming and CSS Examples for students
-      who are taking the Introduction to Computing Class (CS 1130) under the Computer Studies Division, School of Arts and Sciences
-      of the Ateneo de Davao University. Simple Examples involving Basic HTML, Javascript Functions, User Interaction, 
-      Mathematical Calculations, Simple Styling and Page Layouts are shown.</p>
-    
+      <div class="clearfix">
+        <div class="content-left">
+          <h3>Assignment #1 - Conversion</h3>
+          <p>Converting between Celsius/Fahrenheit, Meters/Feet and vice versa. Check it out!</p>
+          <a href="https://cherry5201.github.io/ITC/Assign1" class="w3-button">View Assignment</a>
+        </div>
+        <div class="content-right">
+          <h3>Assignment #2 - Income Tax Calculator</h3>
+          <p>This project calculates income tax based on user inputs. See how it works!</p>
+          <a href="https://cherry5201.github.io/ITC/Assign2" class="w3-button">View Assignment</a>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <div class="content-left">
+          <h3>Assignment #3 - Factorial, Sum & Average</h3>
+          <p>This assignment demonstrates using loops for calculating factorials, sum, and averages.</p>
+          <a href="https://cherry5201.github.io/ITC/Assign3" class="w3-button">View Assignment</a>
+        </div>
+        <div class="content-right">
+          <h3>Assignment #4 - Simple Payroll</h3>
+          <p>A simple payroll program that calculates salaries based on hours worked.</p>
+          <a href="https://cherry5201.github.io/ITC/Assign4" class="w3-button">View Assignment</a>
+        </div>
+      </div>
+
       <br>
-      <h2>
-      Student Assignments:  
-      </h2>
-      <br>
-      <h3>Assignment #1 - Conversion (Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters)</h3>
-      <h3>Assignment #2 - Income Tax Calculator </h3>
-      <h3>Assignment #3 - Factorial (While Loop), Sum (Do While Loop) and Average (For Loop) of First N Natural Numbers</h3>
-      <h3>Assignment #4 - Simple Payroll </h3>
-
-      <br>
-      <h2>*** All Assignments are Due on <strong>DECEMBER 7, 2024</strong> *** </h2>
-      <h2> The Rubrics will be shown in our Daigler20 class </h2>
-      <h4> Upload and launch the pages in your specified github  or w3spaces website. </h4>
-     
-
+      <h2>Thanks for visiting! <strong>See you next time!</strong></h2>
+    </div>
 
   </div>
 
-  
-<!-- End Page Content -->
-</div>
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Cherry L. Tiu | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+  </div>
 
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+  <script>
+    // Toggle navbar on small screens
+    function toggleNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
 
 </body>
 </html>
