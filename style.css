@@ -158,48 +158,5 @@
     }
   
 
-<body>
 
-  <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="Assignments">Assignments <i class="fa fa-caret-down"></i></button>
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="https://cherry5201.github.io/ITC/Assign1" class="w3-bar-item w3-button menu-item">Assignment #1 - Conversion</a>
-          <a href="https://cherry5201.github.io/ITC/Assign2" class="w3-bar-item w3-button menu-item">Assignment #2 - Income Tax Calculator</a>
-          <a href="https://cherry5201.github.io/ITC/Assign3" class="w3-bar-item w3-button menu-item">Assignment #3 - Factorial, Sum & Average</a>
-          <a href="https://cherry5201.github.io/ITC/Assign4" class="w3-bar-item w3-button menu-item">Assignment #4 - Simple Payroll</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-    <!-- Introduction Section -->
-    <div class="w3-container w3-content" style="max-width:800px" id="band">
-      
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>&copy; 2024 Cherry L. Tiu | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
-  </div>
-
-  <script>
-    // Toggle navbar on small screens
-    function toggleNav() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-  </script>
-
-</body>
-</html>
