@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ITC Assignments - Cherry Tiu</title>
+  
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Roboto|Poppins">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- Internal styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FADCD9; /* Light pink background */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .w3-bar {
+      background-color: #F2A7C6; /* Lighter pink navbar */
+      color: white;
+      padding: 15px;
+    }
+
+    .w3-bar a {
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 10px 20px;
+    }
+
+    .w3-bar a:hover {
+      background-color: #F5A7C0; /* Light pink on hover */
+      transition: background-color 0.3s ease;
+    }
+
+    .w3-dropdown-content a:hover {
+      background-color: #F5A7C0;
+    }
+
+    .w3-container {
+      padding: 30px 20px;
+      max-width: 1200px;  /* Increased max width */
+      margin: auto;
+    }
+
+    .w3-content {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    h2, h3 {
+      color: #F2A7C6;
+      font-weight: bold;
+    }
+
+    .w3-wide {
+      letter-spacing: 3px;
+      font-size: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .w3-button {
+      background-color: #F5A7C0;
+      color: white;
+      border-radius: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .w3-button:hover {
+      background-color: #F2A7C6;
+      transform: scale(1.05);
+    }
+
+    .menu-item {
+      color: #E91E63;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+      font-weight: 500;
+    }
+
+    .menu-item:hover {
+      color: #C2185B;
+    }
+
+    .footer {
+      background-color: #F2A7C6;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .footer a {
+      color: #ECF0F1;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+
+    .footer a:hover {
+      color: #F5A7C0;
+    }
+
+    /* Add smooth transitions for slides */
+    .mySlides {
+      display: none;
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* Layout tweaks */
+    .content-left {
+      width: 48%;
+      float: left;
+      padding: 20px;
+    }
+
+    .content-right {
+      width: 48%;
+      float: right;
+      padding: 20px;
+    }
+
+    /* Clear floats */
+    .clearfix {
+      clear: both;
+    }
+
+    .cat-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    /* Add some responsiveness */
+    @media screen and (max-width: 768px) {
+      .w3-container {
+        padding: 20px 10px;
+      }
+
+      .content-left, .content-right {
+        width: 100%;
+        float: none;
+      }
+
+      .w3-bar a {
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="Assignments">Assignments <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="https://cherry5201.github.io/ITC/Assign1" class="w3-bar-item w3-button menu-item">Assignment #1 - Conversion</a>
+          <a href="https://cherry5201.github.io/ITC/Assign2" class="w3-bar-item w3-button menu-item">Assignment #2 - Income Tax Calculator</a>
+          <a href="https://cherry5201.github.io/ITC/Assign3" class="w3-bar-item w3-button menu-item">Assignment #3 - Factorial, Sum & Average</a>
+          <a href="https://cherry5201.github.io/ITC/Assign4" class="w3-bar-item w3-button menu-item">Assignment #4 - Simple Payroll</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- Introduction Section -->
+    <div class="w3-container w3-content" style="max-width:800px" id="band">
+      
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Cherry L. Tiu | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+  </div>
+
+  <script>
+    // Toggle navbar on small screens
+    function toggleNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+</body>
+</html>
