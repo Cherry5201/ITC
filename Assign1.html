@@ -1,75 +1,39 @@
 <!DOCTYPE html>
 <html>
-<title>Assignment#1_Tiu</title>
-    <head>
-            <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <title>Assignment#1_Tiu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-      <a href="#" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="toggleNav()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+        </div>
     </div>
-  </div>
 
     <div class="w3-container w3-content" style="max-width:800px" id="band">
+        <h1>Conversion</h1>
 
+        <h3>Temperature</h3>
+        <label>Fahrenheit:</label>
+        <input type="number" id="f" onkeyup="convertFahrenheitToCelsius()">
+        <br>
 
-        
-    <h1>Conversion</h1>
+        <label>Celsius:</label>
+        <input type="number" id="c" onkeyup="convertCelsiusToFahrenheit()">
+        <br>
+        <br>
+        <h3>Length</h3>
+        <label>Meters:</label>
+        <input type="number" id="m" onkeyup="convertMetersToFeet()">
+        <br>
+        <label>Feet:</label>
+        <input type="number" id="ft" onkeyup="convertFeetToMeters()">
+    </div>
 
-    <h3>Temperature</h3>
-    <label>Fahrenheit:</label>
-    <input type="number" id="f" onkeyup="convertFahrenheitToCelsius()">
-    <br>
-
-    <label>Celsius:</label>
-    <input type="number" id="c" onkeyup="convertCelsiusToFahrenheit()">
-    <br>
-    <br>
-    <h3>Length</h3>
-    <label>Meters:</label>
-    <input type="number" id="m" onkeyup="convertMetersToFeet()">
-    <br>
-    <label>Feet:</label>
-    <input type="number" id="ft" onkeyup="convertFeetToMeters()">
-
+    <script src="Assign1.js"></script>
 </body>
-
-<script>
-    function convertFahrenheitToCelsius() {
-        let f = document.getElementById("f").value;
-        if (f !== "") {
-            let c = (f - 32) * (5 / 9);
-            document.getElementById("c").value = c.toFixed(2); // Update Celsius
-        }
-    }
-
-    function convertCelsiusToFahrenheit() {
-        let c = document.getElementById("c").value;
-        if (c !== "") {
-            let f = (c * 1.8) + 32;
-            document.getElementById("f").value = f.toFixed(2); // Update Fahrenheit
-        }
-    }
-
-    function convertMetersToFeet() {
-        let m = document.getElementById("m").value;
-        if (m !== "") {
-            let ft = m * 3.28084;
-            document.getElementById("ft").value = ft.toFixed(2); // Update Feet
-        }
-    }
-
-    function convertFeetToMeters() {
-        let ft = document.getElementById("ft").value;
-        if (ft !== "") {
-            let m = ft * 0.3048;
-            document.getElementById("m").value = m.toFixed(2); // Update Meters
-        }
-    }
-</script>
-
 </html>
