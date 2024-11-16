@@ -58,6 +58,10 @@ input[type="number"]:focus {
   box-shadow: 0 0 5px #F05A89;
 }
 
+#nlimit{
+  width: 50%;
+}
+
 input[readonly] {
   background-color: #f7f7f7;
   color: #333;
