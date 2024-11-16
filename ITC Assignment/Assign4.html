@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiu_Assign#4</title>
+    <link rel="stylesheet" href="Assign4.css">
+</head>
+<body>
+    <div id="maindiv">
+        <!-- Header Section -->
+        <div id="headerdiv">
+            <h2>Payroll Management System</h2>
+        </div>
+
+        <!-- Input Section -->
+        <div id="inputdiv">
+            <h3>Employee Details</h3>
+            <label class="inputlabel" for="employee">Employee Name:</label>
+            <input type="text" id="employee">
+
+            <label class="inputlabel" for="dwork">Days Worked:</label>
+            <input type="number" id="dwork">
+
+            <label class="inputlabel" for="drate">Daily Rate:</label>
+            <input type="number" id="drate">
+
+            <label class="inputlabel" for="damount">Deduction Amount:</label>
+            <input type="number" id="damount">
+
+            <button id="btnadd">Add</button>
+            <button id="btnclear">Clear</button>
+        </div>
+
+        <!-- Payroll Table -->
+        <div id="cartdiv">
+            <h3>Payroll Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Employee Name</th>
+                        <th>Days Worked</th>
+                        <th>Daily Rate</th>
+                        <th>Gross Pay</th>
+                        <th>Deduction</th>
+                        <th>Net Pay</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody"></tbody>
+            </table>
+            <div>
+                <label class="inputlabel" for="delitem">Delete Line No.:</label>
+                <input type="number" id="delitem">
+                <button id="btndelete">Delete</button>
+            </div>
+        </div>
+        <!-- Back to Home Button -->
+        <a href="index.html" class="home-button">Back to Home</a>
+
+        <div class="footer">
+            <p>&copy; 2024 Cherry Tiu</p>
+        </div>
+    </div>
+    <script src="Assign4.js"></script>
+</body>
+</html>
