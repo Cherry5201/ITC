@@ -25,3 +25,8 @@ function computeTax() {
     totaltax = basictax + brackettax;
     document.getElementById("incometax").value = totaltax.toFixed(2);
 }
+
+function Clear() {
+    document.getElementById("ti").value = " ";
+    document.getElementById("incometax").value = " ";
+}
