@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiu_Assign#2</title>
-    <link rel="stylesheet" href="Assign123.css">
+    <link rel="stylesheet" href="Assign23.css">
 </head>
 <body>
     <div class="container">
         <h1>Income Tax Calculator</h1>
 
-        <label for="ti">Taxable Income:</label>
+        <label for="ti">Taxable Income:</label><br>
         <input type="number" id="ti" placeholder="Enter your income" onkeyup="computeTax()">
-
-        <label for="incometax">Tax Payable:</label>
+        <br><br>
+        <label for="incometax">Tax Payable:</label><br>
         <input type="number" id="incometax" placeholder="Tax amount" readonly>
-
-        <!-- Back to Home Button -->
-        <a href="index.html" class="home-button">Back to Home</a>
-
-        <div class="footer">
-            <p>&copy; 2024 Cherry Tiu</p>
-        </div>
+        <br>
+        <button onclick="Clear()">Clear</button>
     </div>
-
+    <!-- Home Button -->
+    <a href="index.html" class="home-button">Back to Home</a>
+    
     <script src="Assign2.js"></script>
 </body>
 </html>
