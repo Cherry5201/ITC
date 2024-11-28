@@ -29,3 +29,13 @@ function convertFeetToMeters() {
         document.getElementById("m").value = m.toFixed(2);
     }
 }
+
+function clearTemperature() {
+    document.getElementById("f").value = "";
+    document.getElementById("c").value = "";
+}
+
+function clearLength() {
+    document.getElementById("m").value = "";
+    document.getElementById("ft").value = "";
+}
