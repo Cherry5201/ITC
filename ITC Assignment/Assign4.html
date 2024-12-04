@@ -8,40 +8,32 @@
 </head>
 <body>
     <div id="maindiv">
-        <!-- Header Section -->
         <div id="headerdiv">
             <h2>Payroll Management System</h2>
         </div>
 
-        <!-- Input Section -->
         <div id="inputdiv">
             <h3>Employee Details</h3>
             <label class="inputlabel" for="employee">Employee Name:</label>
             <input type="text" id="employee">
-
             <label class="inputlabel" for="dwork">Days Worked:</label>
             <input type="number" id="dwork">
-
             <label class="inputlabel" for="drate">Daily Rate:</label>
             <input type="number" id="drate">
-
             <label class="inputlabel" for="damount">Deduction Amount:</label>
             <input type="number" id="damount">
-
-            <br>
             <div class="button-container">
                 <button id="btnadd">Add</button>
                 <button id="btnclear">Clear</button>
             </div>
         </div>
 
-        <!-- Payroll Table -->
         <div id="cartdiv">
             <h3>Payroll Records</h3>
             <table>
                 <thead>
                     <tr>
-                        <th>No.</th>
+                        <th>No. </th>
                         <th>Employee Name</th>
                         <th>Days Worked</th>
                         <th>Daily Rate</th>
@@ -51,20 +43,51 @@
                     </tr>
                 </thead>
                 <tbody id="tablebody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Total</strong></td>
+                        <td id="totalGross">0.00</td>
+                        <td id="totalDeduction">0.00</td>
+                        <td id="totalNet">0.00</td>
+                    </tr>
+                </tfoot>
             </table>
             <div>
                 <label class="inputlabel" for="delitem">Delete Line No.:</label>
                 <input type="number" id="delitem">
                 <button id="btndelete">Delete</button>
-            </div>
+                <button id="btndeleteall">Delete All</button>
+            </div> 
         </div>
-        <!-- Back to Home Button -->
-        <a href="index.html" class="home-button">Back to Home</a>
 
-        <div class="footer">
-            <p>&copy; 2024 Cherry Tiu</p>
-        </div>
+        <a href="index.html" class="home-button">Back to Home</a>
+        <div class="footer"></div>
     </div>
+
+    <!-- Clear Confirmation Dialog -->
+    <dialog id="clearDialog">
+        <p>Are you sure you want to clear all input fields?</p>
+        <div class="dialog-buttons">
+            <button id="clearConfirm">Yes</button>
+            <button id="clearCancel">No</button>
+        </div>
+    </dialog>
+
+    <!-- Delete Confirmation Dialog -->
+    <dialog id="deleteDialog">
+        <p id="deleteMessage">Are you sure you want to delete this item?</p>
+        <div class="dialog-buttons">
+            <button id="deleteConfirm">Yes</button>
+            <button id="deleteCancel">No</button>
+        </div>
+    </dialog>
+
+    <!-- Alert Dialog -->
+    <dialog id="alertDialog">
+        <p id="alertMessage"></p>
+        <button id="alertOk">OK</button>
+    </dialog>
+    
     <script src="Assign4.js"></script>
 </body>
 </html>
